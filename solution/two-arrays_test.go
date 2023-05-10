@@ -21,6 +21,41 @@ func Test_twoArrays(t *testing.T) {
 			},
 			want: "YES",
 		},
+		"case_0.1": {args: args{
+			k: 4,
+			A: []int32{1, 3},
+			B: []int32{3, 1},
+		},
+			want: "YES",
+		},
+		"case_0.2": {args: args{
+			k: 5,
+			A: []int32{2, 3, 1, 1, 1},
+			B: []int32{1, 3, 4, 3, 3},
+		},
+			want: "NO",
+		},
+		"case_0.3": {args: args{
+			k: 9,
+			A: []int32{1, 5, 1, 4, 4, 2, 7, 1, 2, 2},
+			B: []int32{8, 7, 1, 7, 7, 4, 4, 3, 6, 7},
+		},
+			want: "NO",
+		},
+		"case_0.4": {args: args{
+			k: 9,
+			A: []int32{3, 6, 8, 5, 9, 9, 4, 8, 4, 7},
+			B: []int32{5, 1, 0, 1, 6, 4, 1, 7, 4, 3},
+		},
+			want: "YES",
+		},
+		"case_0.5": {args: args{
+			k: 4,
+			A: []int32{4, 4, 3, 2, 1, 4, 4, 3, 2, 4},
+			B: []int32{2, 3, 0, 1, 1, 3, 1, 0, 0, 2},
+		},
+			want: "YES",
+		},
 		"case_1.1": {
 			args: args{
 				k: 10,

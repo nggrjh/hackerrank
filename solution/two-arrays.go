@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-// FIXME: https://www.hackerrank.com/challenges/one-month-preparation-kit-two-arrays/problem
+// https://www.hackerrank.com/challenges/one-month-preparation-kit-two-arrays/problem
 func twoArrays(k int32, A, B []int32) string {
 	if len(A) > 1 {
 		return evaluate(k, A, B)
@@ -44,25 +44,33 @@ func evaluate(k int32, A, B []int32) string {
 	for _, d := range setD {
 		for i := current; i < len(setB); i++ {
 			b := setB[i]
-			need := countD[d]
-			have := countB[b]
-
 			if d > b {
 				return "NO"
 			}
 
-			if need > have {
+			need := countD[d]
+			have := countB[b]
+
+			if need < 1 {
+				break
+			}
+
+			if have < 1 {
 				continue
 			}
 
-			countD[d] -= need
-			countB[b] -= need
+			if have < need {
+				countD[d] -= have
+				countB[b] -= have
+			} else {
+				countD[d] -= need
+				countB[b] -= need
+			}
 
 			if countB[b] < 1 {
 				current += 1
 			}
 
-			break
 		}
 	}
 
