@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/one-month-preparation-kit-strings-xor/problem
 def strings_xor(s, t):
     res = ""
     for i in range(len(s)):
