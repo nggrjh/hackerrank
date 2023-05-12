@@ -1,5 +1,9 @@
 package linked_list
 
+import (
+	"sort"
+)
+
 type linkedListNode struct {
 	data int32
 	next *linkedListNode
@@ -41,6 +45,8 @@ func (n *linkedListNode) IsEqual(head *linkedListNode) bool {
 	for {
 		if head1 == nil && head2 == nil {
 			return true
+		} else if head1 == nil || head2 == nil {
+			return false
 		}
 
 		if head1.data != head2.data {
@@ -52,9 +58,57 @@ func (n *linkedListNode) IsEqual(head *linkedListNode) bool {
 	}
 }
 
+func (n *linkedListNode) MergeSort(head *linkedListNode) {
+	head1 := n
+	head2 := head
+
+	for {
+		if head2 == nil {
+			break
+		}
+
+		if head1.data <= head2.data {
+			if head1.next == nil {
+				head1.next = head2
+				head2.prev = head1
+
+				head2 = head2.next
+			}
+
+			head1 = head1.next
+			continue
+		}
+
+		next := head2.next
+
+		if head1.prev != nil {
+			head1.prev.next = head2
+		} else {
+			*n = *head2
+			break
+		}
+
+		head2.prev = head1.prev
+		head1.prev = head2
+		head2.next = head1
+
+		head2 = next
+	}
+}
+
 type linkedList struct {
 	head *linkedListNode
 	tail *linkedListNode
+}
+
+func (ll *linkedList) sort() {
+	nodes := ll.head.GetQueue()
+	sort.SliceStable(nodes, func(i, j int) bool { return nodes[i] < nodes[j] })
+
+	*ll = linkedList{}
+	for _, n := range nodes {
+		ll.queue(n)
+	}
 }
 
 func (ll *linkedList) queue(data int32) {
