@@ -63,7 +63,7 @@ func (n *linkedListNode) MergeSort(head *linkedListNode) {
 	head2 := head
 
 	for {
-		if head2 == nil {
+		if head2 == nil || head1 == head2 {
 			break
 		}
 

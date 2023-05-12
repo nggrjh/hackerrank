@@ -154,6 +154,34 @@ func Test_linkedListNode_MergeSort(t *testing.T) {
 			},
 			want: []int32{1, 1, 2, 3, 3},
 		},
+		"case_3": {
+			args: args{
+				nodes1: []int32{1, 2, 3},
+				nodes2: []int32{1, 3},
+			},
+			want: []int32{1, 1, 2, 3, 3},
+		},
+		"case_4": {
+			args: args{
+				nodes1: []int32{1, 3, 7},
+				nodes2: []int32{1, 2},
+			},
+			want: []int32{1, 1, 2, 3, 7},
+		},
+		"case_5": {
+			args: args{
+				nodes1: []int32{1, 3, 7},
+				nodes2: []int32{3, 4},
+			},
+			want: []int32{1, 3, 3, 4, 7},
+		},
+		"case_6": {
+			args: args{
+				nodes1: []int32{1, 2, 3},
+				nodes2: []int32{3, 4},
+			},
+			want: []int32{1, 2, 3, 3, 4},
+		},
 	}
 	for name, test := range tests {
 		tt := test
