@@ -3,6 +3,7 @@ package solution
 import "testing"
 
 func Test_birthday(t *testing.T) {
+	t.Parallel()
 	type args struct {
 		s []int32
 		d int32
@@ -56,6 +57,7 @@ func Test_birthday(t *testing.T) {
 	for name, test := range tests {
 		tt := test
 		t.Run(name, func(t *testing.T) {
+			t.Parallel()
 			if got := birthday(tt.args.s, tt.args.d, tt.args.m); got != tt.want {
 				t.Errorf("birthday() = %v, want %v", got, tt.want)
 			}
