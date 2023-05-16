@@ -1,13 +1,9 @@
 package solution
 
-import "fmt"
-
 // https://www.hackerrank.com/challenges/one-month-preparation-kit-the-birthday-bar/problem
 func birthday(s []int32, d, m int32) int32 {
 	ln := len(s)
 	mx := ln - int(m)
-
-	fmt.Println(ln, mx)
 
 	var tmp [][]int32
 	if mx < 1 {

@@ -57,7 +57,7 @@ func Test_maxHourGlass(t *testing.T) {
 		args args
 		want int32
 	}{
-		"case": {
+		"case_0": {
 			args: args{
 				arr: [][]int32{
 					{1, 1, 1, 0, 0, 0},
@@ -70,7 +70,7 @@ func Test_maxHourGlass(t *testing.T) {
 			},
 			want: 7,
 		},
-		"case1": {
+		"case_1": {
 			args: args{
 				arr: [][]int32{
 					{1, 1, 1, 0, 0, 0},
@@ -82,6 +82,19 @@ func Test_maxHourGlass(t *testing.T) {
 				},
 			},
 			want: 19,
+		},
+		"case_3": {
+			args: args{
+				arr: [][]int32{
+					{0, -4, -6, 0, -7, -6},
+					{-1, -2, -6, -8, -3, -1},
+					{-8, -4, -2, -8, -8, -6},
+					{-3, -1, -2, -5, -7, -4},
+					{-3, -5, -3, -6, -6, -6},
+					{-3, -6, 0, -8, -6, -7},
+				},
+			},
+			want: -19,
 		},
 	}
 	for name, test := range tests {
