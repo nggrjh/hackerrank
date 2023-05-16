@@ -85,12 +85,12 @@ func Test_findMergeNode(t *testing.T) {
 
 			l1 := &linkedList{}
 			for i := range tt.args.nodes1 {
-				l1.queue(tt.args.nodes1[i])
+				l1.enqueue(tt.args.nodes1[i])
 			}
 
 			l2 := &linkedList{}
 			for i := range tt.args.nodes2 {
-				l2.queue(tt.args.nodes2[i])
+				l2.enqueue(tt.args.nodes2[i])
 			}
 
 			got := findMergeNode(l1.head, l2.head)

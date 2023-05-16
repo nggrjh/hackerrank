@@ -34,7 +34,7 @@ func Test_linkedListNode_GetQueue(t *testing.T) {
 
 			list := &linkedList{}
 			for _, n := range tt.args.nodes {
-				list.queue(n)
+				list.enqueue(n)
 			}
 
 			if got := list.head.GetQueue(); !reflect.DeepEqual(got, tt.want) {
@@ -73,7 +73,7 @@ func Test_linkedListNode_GetStack(t *testing.T) {
 
 			list := &linkedList{}
 			for _, n := range tt.args.nodes {
-				list.queue(n)
+				list.enqueue(n)
 			}
 
 			if got := list.tail.GetStack(); !reflect.DeepEqual(got, tt.want) {
@@ -115,12 +115,12 @@ func Test_linkedListNode_IsEqual(t *testing.T) {
 
 			l1 := &linkedList{}
 			for i := range tt.args.nodes1 {
-				l1.queue(tt.args.nodes1[i])
+				l1.enqueue(tt.args.nodes1[i])
 			}
 
 			l2 := &linkedList{}
 			for i := range tt.args.nodes2 {
-				l2.queue(tt.args.nodes2[i])
+				l2.enqueue(tt.args.nodes2[i])
 			}
 
 			if got := l1.head.IsEqual(l2.head); got != tt.want {
@@ -190,12 +190,12 @@ func Test_linkedListNode_MergeSort(t *testing.T) {
 
 			l1 := &linkedList{}
 			for i := range tt.args.nodes1 {
-				l1.queue(tt.args.nodes1[i])
+				l1.enqueue(tt.args.nodes1[i])
 			}
 
 			l2 := &linkedList{}
 			for i := range tt.args.nodes2 {
-				l2.queue(tt.args.nodes2[i])
+				l2.enqueue(tt.args.nodes2[i])
 			}
 
 			l1.head.MergeSort(l2.head)
@@ -235,7 +235,7 @@ func Test_linkedList_sort(t *testing.T) {
 
 			list := &linkedList{}
 			for _, n := range tt.args.nodes {
-				list.queue(n)
+				list.enqueue(n)
 			}
 
 			list.sort()

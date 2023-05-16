@@ -1,6 +1,9 @@
 package solution
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func Test_solveOperators(t *testing.T) {
 	t.Parallel()
@@ -103,6 +106,44 @@ func Test_maxHourGlass(t *testing.T) {
 			t.Parallel()
 			if got := maxHourGlass(tt.args.arr); got != tt.want {
 				t.Errorf("maxHourGlass() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_countSwaps(t *testing.T) {
+	type args struct {
+		arr []int32
+	}
+	tests := map[string]struct {
+		args  args
+		want  []int32
+		want1 int32
+	}{
+		"case": {
+			args: args{
+				arr: []int32{4, 3, 1, 2},
+			},
+			want:  []int32{1, 2, 3, 4},
+			want1: 5,
+		},
+		"case1": {
+			args: args{
+				arr: []int32{1, 2, 3, 4},
+			},
+			want:  []int32{1, 2, 3, 4},
+			want1: 0,
+		},
+	}
+	for name, test := range tests {
+		tt := test
+		t.Run(name, func(t *testing.T) {
+			got, got1 := countSwaps(tt.args.arr)
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("countSwaps() got = %v, want %v", got, tt.want)
+			}
+			if got1 != tt.want1 {
+				t.Errorf("countSwaps() got1 = %v, want %v", got1, tt.want1)
 			}
 		})
 	}

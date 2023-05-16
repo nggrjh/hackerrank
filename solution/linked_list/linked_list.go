@@ -107,11 +107,11 @@ func (ll *linkedList) sort() {
 
 	*ll = linkedList{}
 	for _, n := range nodes {
-		ll.queue(n)
+		ll.enqueue(n)
 	}
 }
 
-func (ll *linkedList) queue(data int32) {
+func (ll *linkedList) enqueue(data int32) {
 	node := &linkedListNode{data: data, prev: ll.tail}
 
 	if ll.head == nil {
@@ -123,7 +123,7 @@ func (ll *linkedList) queue(data int32) {
 	ll.tail = node
 }
 
-func (ll *linkedList) stack(data int32) {
+func (ll *linkedList) push(data int32) {
 	node := &linkedListNode{data: data, next: ll.tail}
 
 	if ll.tail == nil {

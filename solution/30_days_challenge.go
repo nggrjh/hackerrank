@@ -24,3 +24,24 @@ func maxHourGlass(arr [][]int32) int32 {
 
 	return max
 }
+
+// https://www.hackerrank.com/challenges/30-sorting/problem
+func countSwaps(arr []int32) ([]int32, int32) {
+	n := len(arr)
+
+	var numberOfSwaps int32
+	for i := 0; i < n; i++ {
+		for j := 0; j < n-1; j++ {
+			if arr[j] > arr[j+1] {
+				arr[j], arr[j+1] = arr[j+1], arr[j]
+				numberOfSwaps++
+			}
+		}
+
+		if numberOfSwaps < 1 {
+			break
+		}
+	}
+
+	return arr, numberOfSwaps
+}

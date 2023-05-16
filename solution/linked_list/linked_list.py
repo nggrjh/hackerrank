@@ -30,3 +30,18 @@ class LinkedList:
             current = current.next
 
         return head
+
+    @staticmethod
+    def remove_duplicates(head):
+        t = list()
+        s = LinkedList()
+
+        current = head
+        head = None
+        while current:
+            if current.data not in t:
+                head = s.insert(head, current.data)
+                t.append(current.data)
+
+            current = current.next
+        return head
