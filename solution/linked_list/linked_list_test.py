@@ -3,8 +3,8 @@ from unittest import TestCase
 from solution.linked_list.linked_list import LinkedList
 
 
-class TestLinkedList(TestCase):
-    def test_display(self):
+class TestLinkedListDisplay(TestCase):
+    def test_case_1(self):
         ll = LinkedList()
 
         head = None
@@ -15,7 +15,9 @@ class TestLinkedList(TestCase):
         want = "2 3 4 1"
         self.assertEqual(want, got)
 
-    def test_remove_duplicates(self):
+
+class TestLinkedListRemoveDuplicates(TestCase):
+    def test_case_1(self):
         ll = LinkedList()
 
         head = None

@@ -2,6 +2,10 @@ package solution
 
 import (
 	"math"
+	"math/big"
+	"strconv"
+	"strings"
+	"time"
 )
 
 func solveOperators(mealCost float64, tipPercent int32, taxPercent int32) int32 {
@@ -44,4 +48,58 @@ func countSwaps(arr []int32) ([]int32, int32) {
 	}
 
 	return arr, numberOfSwaps
+}
+
+// https://www.hackerrank.com/challenges/30-nested-logic/problem
+func calculateFine(returnedDate, dueDate string) int32 {
+	date := func(s string) time.Time {
+		a := strings.Split(s, " ")
+		d, _ := strconv.ParseInt(a[0], 10, 64)
+		m, _ := strconv.ParseInt(a[1], 10, 64)
+		y, _ := strconv.ParseInt(a[2], 10, 64)
+		return time.Date(int(y), time.Month(m), int(d), 0, 0, 0, 0, time.UTC)
+	}
+
+	returned := date(returnedDate)
+	due := date(dueDate)
+
+	if returned.After(due) {
+		if returned.Year() != due.Year() {
+			return 10000
+		}
+
+		if returned.Month() == due.Month() {
+			return 15 * int32(returned.Day()-due.Day())
+		}
+
+		return 500 * int32(returned.Month()-due.Month())
+	}
+
+	return 0
+}
+
+// https://www.hackerrank.com/challenges/30-running-time-and-complexity/
+func checkPrime(arr []int64) []string {
+	st := make([]string, len(arr))
+	for i, v := range arr {
+		st[i] = "Prime"
+
+		if !big.NewInt(v).ProbablyPrime(0) {
+			st[i] = "Not prime"
+		}
+	}
+	return st
+}
+
+// https://www.hackerrank.com/challenges/30-bitwise-and/problem
+func bitwiseAnd(N, K int32) int32 {
+	var max int32
+	for i := 1; i <= int(N); i++ {
+		for j := i + 1; j <= int(N); j++ {
+			if x := int32(i & j); x < K && x > max {
+				max = x
+			}
+		}
+	}
+	return max
 }
