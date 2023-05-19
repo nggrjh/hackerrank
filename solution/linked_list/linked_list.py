@@ -6,6 +6,15 @@ class Node:
 
 class LinkedList:
     @staticmethod
+    def get(head):
+        order = []
+        current = head
+        while current:
+            order.append(current.data)
+            current = current.next
+        return order
+
+    @staticmethod
     def display(head):
         order = []
         current = head
@@ -44,4 +53,14 @@ class LinkedList:
                 t.append(current.data)
 
             current = current.next
+        return head
+
+    def merge(self, head1, head2):
+        arr = self.get(head1) + self.get(head2)
+        arr.sort()
+
+        head = None
+        for i in arr:
+            head = self.insert(head, i)
+
         return head
