@@ -839,6 +839,798 @@ func Test_saveThePrisoner(t *testing.T) {
 			},
 			want: 3,
 		},
+		"case_10.1": {
+			args: args{
+				prisoner: 46934,
+				candy:    543563655,
+				chair:    46743,
+			},
+			want: 20809,
+		},
+		"case_10.2": {
+			args: args{
+				prisoner: 530,
+				candy:    533048047,
+				chair:    529,
+			},
+			want: 15,
+		},
+		"case_10.3": {
+			args: args{
+				prisoner: 436776012,
+				candy:    436776012,
+				chair:    436776011,
+			},
+			want: 436776010,
+		},
+		"case_10.4": {
+			args: args{
+				prisoner: 999999999,
+				candy:    999999998,
+				chair:    999983945,
+			},
+			want: 999983943,
+		},
+		"case_10.5": {
+			args: args{
+				prisoner: 59,
+				candy:    78693934,
+				chair:    2,
+			},
+			want: 30,
+		},
+		"case_10.6": {
+			args: args{
+				prisoner: 49,
+				candy:    897910613,
+				chair:    48,
+			},
+			want: 17,
+		},
+		"case_10.7": {
+			args: args{
+				prisoner: 124,
+				candy:    738996353,
+				chair:    2,
+			},
+			want: 2,
+		},
+		"case_10.8": {
+			args: args{
+				prisoner: 999999999,
+				candy:    871077789,
+				chair:    999999998,
+			},
+			want: 871077787,
+		},
+		"case_10.9": {
+			args: args{
+				prisoner: 2,
+				candy:    576581,
+				chair:    1,
+			},
+			want: 1,
+		},
+		"case_10.10": {
+			args: args{
+				prisoner: 526663404,
+				candy:    801992888,
+				chair:    526663403,
+			},
+			want: 275329482,
+		},
+		"case_10.11": {
+			args: args{
+				prisoner: 999999998,
+				candy:    999999998,
+				chair:    1,
+			},
+			want: 999999998,
+		},
+		"case_10.12": {
+			args: args{
+				prisoner: 126,
+				candy:    859530642,
+				chair:    126,
+			},
+			want: 95,
+		},
+		"case_10.13": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999999999,
+				chair:    1000000000,
+			},
+			want: 999999998,
+		},
+		"case_10.14": {
+			args: args{
+				prisoner: 107,
+				candy:    425601402,
+				chair:    2,
+			},
+			want: 22,
+		},
+		"case_10.15": {
+			args: args{
+				prisoner: 381,
+				candy:    695699141,
+				chair:    380,
+			},
+			want: 378,
+		},
+		"case_10.16": {
+			args: args{
+				prisoner: 11,
+				candy:    32020900,
+				chair:    6,
+			},
+			want: 4,
+		},
+		"case_10.17": {
+			args: args{
+				prisoner: 468840391,
+				candy:    468840391,
+				chair:    1,
+			},
+			want: 468840391,
+		},
+		"case_10.18": {
+			args: args{
+				prisoner: 999999999,
+				candy:    29010,
+				chair:    1,
+			},
+			want: 29010,
+		},
+		"case_10.19": {
+			args: args{
+				prisoner: 31,
+				candy:    238250965,
+				chair:    2,
+			},
+			want: 1,
+		},
+		"case_10.20": {
+			args: args{
+				prisoner: 6,
+				candy:    923562791,
+				chair:    1,
+			},
+			want: 5,
+		},
+		"case_10.21": {
+			args: args{
+				prisoner: 39,
+				candy:    558119524,
+				chair:    38,
+			},
+			want: 38,
+		},
+		"case_10.22": {
+			args: args{
+				prisoner: 121,
+				candy:    652798629,
+				chair:    1,
+			},
+			want: 120,
+		},
+		"case_10.23": {
+			args: args{
+				prisoner: 94,
+				candy:    105224796,
+				chair:    94,
+			},
+			want: 67,
+		},
+		"case_10.24": {
+			args: args{
+				prisoner: 9,
+				candy:    903414482,
+				chair:    5,
+			},
+			want: 3,
+		},
+		"case_10.25": {
+			args: args{
+				prisoner: 1718761,
+				candy:    828441828,
+				chair:    1718761,
+			},
+			want: 1717786,
+		},
+		"case_10.26": {
+			args: args{
+				prisoner: 4970962,
+				candy:    984250547,
+				chair:    4970961,
+			},
+			want: 69,
+		},
+		"case_10.27": {
+			args: args{
+				prisoner: 19,
+				candy:    235344290,
+				chair:    2,
+			},
+			want: 12,
+		},
+		"case_10.28": {
+			args: args{
+				prisoner: 514824323,
+				candy:    514824324,
+				chair:    514824323,
+			},
+			want: 514824323,
+		},
+		"case_10.29": {
+			args: args{
+				prisoner: 181,
+				candy:    511813156,
+				chair:    180,
+			},
+			want: 178,
+		},
+		"case_10.30": {
+			args: args{
+				prisoner: 66,
+				candy:    810757794,
+				chair:    2,
+			},
+			want: 1,
+		},
+		"case_10.31": {
+			args: args{
+				prisoner: 154,
+				candy:    935852917,
+				chair:    154,
+			},
+			want: 152,
+		},
+		"case_10.32": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999999999,
+				chair:    999974361,
+			},
+			want: 999974359,
+		},
+		"case_10.33": {
+			args: args{
+				prisoner: 21,
+				candy:    603073253,
+				chair:    20,
+			},
+			want: 18,
+		},
+		"case_10.34": {
+			args: args{
+				prisoner: 29,
+				candy:    834017184,
+				chair:    28,
+			},
+			want: 5,
+		},
+		"case_10.35": {
+			args: args{
+				prisoner: 195446094,
+				candy:    586338283,
+				chair:    195446093,
+			},
+			want: 195446093,
+		},
+		"case_10.36": {
+			args: args{
+				prisoner: 93995,
+				candy:    173193482,
+				chair:    93995,
+			},
+			want: 54691,
+		},
+		"case_10.37": {
+			args: args{
+				prisoner: 101,
+				candy:    143467773,
+				chair:    101,
+			},
+			want: 100,
+		},
+		"case_10.38": {
+			args: args{
+				prisoner: 134,
+				candy:    677010612,
+				chair:    134,
+			},
+			want: 133,
+		},
+		"case_10.39": {
+			args: args{
+				prisoner: 99,
+				candy:    741806010,
+				chair:    2,
+			},
+			want: 1,
+		},
+		"case_10.40": {
+			args: args{
+				prisoner: 75,
+				candy:    129103876,
+				chair:    2,
+			},
+			want: 2,
+		},
+		"case_10.41": {
+			args: args{
+				prisoner: 689371544,
+				candy:    689371544,
+				chair:    689370115,
+			},
+			want: 689370114,
+		},
+		"case_10.42": {
+			args: args{
+				prisoner: 28410362,
+				candy:    340924345,
+				chair:    22721112,
+			},
+			want: 22721112,
+		},
+		"case_10.43": {
+			args: args{
+				prisoner: 170,
+				candy:    780653100,
+				chair:    170,
+			},
+			want: 9,
+		},
+		"case_10.44": {
+			args: args{
+				prisoner: 193,
+				candy:    945602138,
+				chair:    192,
+			},
+			want: 180,
+		},
+		"case_10.45": {
+			args: args{
+				prisoner: 96,
+				candy:    23494832,
+				chair:    95,
+			},
+			want: 78,
+		},
+		"case_10.46": {
+			args: args{
+				prisoner: 944675683,
+				candy:    944675683,
+				chair:    20312,
+			},
+			want: 20311,
+		},
+		"case_10.47": {
+			args: args{
+				prisoner: 27,
+				candy:    546238476,
+				chair:    26,
+			},
+			want: 16,
+		},
+		"case_10.48": {
+			args: args{
+				prisoner: 76195990,
+				candy:    223258463,
+				chair:    489,
+			},
+			want: 70866971,
+		},
+		"case_10.49": {
+			args: args{
+				prisoner: 999999999,
+				candy:    269208525,
+				chair:    1,
+			},
+			want: 269208525,
+		},
+		"case_10.50": {
+			args: args{
+				prisoner: 108,
+				candy:    280122192,
+				chair:    108,
+			},
+			want: 107,
+		},
+		"case_10.51": {
+			args: args{
+				prisoner: 16,
+				candy:    995404080,
+				chair:    15,
+			},
+			want: 14,
+		},
+		"case_10.52": {
+			args: args{
+				prisoner: 50158215,
+				candy:    451423257,
+				chair:    50151646,
+			},
+			want: 50150967,
+		},
+		"case_10.53": {
+			args: args{
+				prisoner: 4,
+				candy:    467711281,
+				chair:    4,
+			},
+			want: 4,
+		},
+		"case_10.54": {
+			args: args{
+				prisoner: 145,
+				candy:    71654651,
+				chair:    144,
+			},
+			want: 144,
+		},
+		"case_10.55": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    2985,
+				chair:    1,
+			},
+			want: 2985,
+		},
+		"case_10.56": {
+			args: args{
+				prisoner: 990301380,
+				candy:    1,
+				chair:    990271854,
+			},
+			want: 990271854,
+		},
+		"case_10.57": {
+			args: args{
+				prisoner: 999999999,
+				candy:    6413,
+				chair:    21476,
+			},
+			want: 27888,
+		},
+		"case_10.58": {
+			args: args{
+				prisoner: 2,
+				candy:    468939243,
+				chair:    1,
+			},
+			want: 1,
+		},
+		"case_10.59": {
+			args: args{
+				prisoner: 399,
+				candy:    592025825,
+				chair:    398,
+			},
+			want: 396,
+		},
+		"case_10.60": {
+			args: args{
+				prisoner: 8,
+				candy:    666688807,
+				chair:    8,
+			},
+			want: 6,
+		},
+		"case_10.61": {
+			args: args{
+				prisoner: 7,
+				candy:    633100633,
+				chair:    2,
+			},
+			want: 5,
+		},
+		"case_10.62": {
+			args: args{
+				prisoner: 12,
+				candy:    124444631,
+				chair:    7,
+			},
+			want: 5,
+		},
+		"case_10.63": {
+			args: args{
+				prisoner: 8,
+				candy:    347412080,
+				chair:    5,
+			},
+			want: 4,
+		},
+		"case_10.64": {
+			args: args{
+				prisoner: 999999999,
+				candy:    1,
+				chair:    999999998,
+			},
+			want: 999999998,
+		},
+		"case_10.65": {
+			args: args{
+				prisoner: 42774012,
+				candy:    765544482,
+				chair:    2,
+			},
+			want: 38386279,
+		},
+		"case_10.66": {
+			args: args{
+				prisoner: 18,
+				candy:    359622755,
+				chair:    18,
+			},
+			want: 16,
+		},
+		"case_10.67": {
+			args: args{
+				prisoner: 198,
+				candy:    964246139,
+				chair:    2,
+			},
+			want: 198,
+		},
+		"case_10.68": {
+			args: args{
+				prisoner: 999999999,
+				candy:    999999998,
+				chair:    999999999,
+			},
+			want: 999999997,
+		},
+		"case_10.69": {
+			args: args{
+				prisoner: 10,
+				candy:    143638249,
+				chair:    1,
+			},
+			want: 9,
+		},
+		"case_10.70": {
+			args: args{
+				prisoner: 1946080,
+				candy:    978878239,
+				chair:    2,
+			},
+			want: 1946080,
+		},
+		"case_10.71": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999976501,
+				chair:    999990588,
+			},
+			want: 999967088,
+		},
+		"case_10.72": {
+			args: args{
+				prisoner: 999999999,
+				candy:    999978713,
+				chair:    28209,
+			},
+			want: 6922,
+		},
+		"case_10.73": {
+			args: args{
+				prisoner: 433677591,
+				candy:    433663369,
+				chair:    206662538,
+			},
+			want: 206648315,
+		},
+		"case_10.74": {
+			args: args{
+				prisoner: 999999999,
+				candy:    1,
+				chair:    1,
+			},
+			want: 1,
+		},
+		"case_10.75": {
+			args: args{
+				prisoner: 2325,
+				candy:    562408200,
+				chair:    2,
+			},
+			want: 1,
+		},
+		"case_10.76": {
+			args: args{
+				prisoner: 172,
+				candy:    456632596,
+				chair:    171,
+			},
+			want: 114,
+		},
+		"case_10.77": {
+			args: args{
+				prisoner: 19,
+				candy:    563815520,
+				chair:    11,
+			},
+			want: 11,
+		},
+		"case_10.78": {
+			args: args{
+				prisoner: 34339,
+				candy:    656699084,
+				chair:    101,
+			},
+			want: 148,
+		},
+		"case_10.79": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999997154,
+				chair:    999999999,
+			},
+			want: 999997152,
+		},
+		"case_10.80": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    1000000000,
+				chair:    90143095,
+			},
+			want: 90143094,
+		},
+		"case_10.81": {
+			args: args{
+				prisoner: 2,
+				candy:    213164653,
+				chair:    1,
+			},
+			want: 1,
+		},
+		"case_10.82": {
+			args: args{
+				prisoner: 134,
+				candy:    644278309,
+				chair:    113,
+			},
+			want: 123,
+		},
+		"case_10.83": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    640282835,
+				chair:    2,
+			},
+			want: 640282836,
+		},
+		"case_10.84": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    1000000000,
+				chair:    999999999,
+			},
+			want: 999999998,
+		},
+		"case_10.85": {
+			args: args{
+				prisoner: 999999999,
+				candy:    999999999,
+				chair:    999999999,
+			},
+			want: 999999998,
+		},
+		"case_10.86": {
+			args: args{
+				prisoner: 999999999,
+				candy:    11132,
+				chair:    999999998,
+			},
+			want: 11130,
+		},
+		"case_10.87": {
+			args: args{
+				prisoner: 197,
+				candy:    190791557,
+				chair:    197,
+			},
+			want: 11,
+		},
+		"case_10.88": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    1000000000,
+				chair:    1000000000,
+			},
+			want: 999999999,
+		},
+		"case_10.89": {
+			args: args{
+				prisoner: 46,
+				candy:    56740430,
+				chair:    45,
+			},
+			want: 26,
+		},
+		"case_10.90": {
+			args: args{
+				prisoner: 40,
+				candy:    277585960,
+				chair:    1,
+			},
+			want: 40,
+		},
+		"case_10.91": {
+			args: args{
+				prisoner: 56,
+				candy:    306549319,
+				chair:    56,
+			},
+			want: 54,
+		},
+		"case_10.92": {
+			args: args{
+				prisoner: 62,
+				candy:    803079454,
+				chair:    43,
+			},
+			want: 6,
+		},
+		"case_10.93": {
+			args: args{
+				prisoner: 184,
+				candy:    834149464,
+				chair:    184,
+			},
+			want: 183,
+		},
+		"case_10.94": {
+			args: args{
+				prisoner: 9,
+				candy:    526219551,
+				chair:    9,
+			},
+			want: 8,
+		},
+		"case_10.95": {
+			args: args{
+				prisoner: 999999999,
+				candy:    999999999,
+				chair:    583101931,
+			},
+			want: 583101930,
+		},
+		"case_10.96": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999999999,
+				chair:    999999999,
+			},
+			want: 999999997,
+		},
+		"case_10.97": {
+			args: args{
+				prisoner: 176,
+				candy:    719643761,
+				chair:    1,
+			},
+			want: 1,
+		},
+		"case_10.98": {
+			args: args{
+				prisoner: 1000000000,
+				candy:    999999999,
+				chair:    328966243,
+			},
+			want: 328966241,
+		},
+		"case_10.99": {
+			args: args{
+				prisoner: 65,
+				candy:    980609890,
+				chair:    37,
+			},
+			want: 36,
+		},
 	}
 	for name, test := range tests {
 		tt := test
