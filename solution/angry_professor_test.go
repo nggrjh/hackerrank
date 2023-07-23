@@ -6,7 +6,7 @@ func Test_angryProfessor(t *testing.T) {
 	t.Parallel()
 	type args struct {
 		attendance int32
-		students []int32
+		students   []int32
 	}
 	tests := map[string]struct {
 		args args
@@ -15,14 +15,14 @@ func Test_angryProfessor(t *testing.T) {
 		"case_1": {
 			args: args{
 				attendance: 3,
-				students: []int32{-1, -3, 4, 2},
+				students:   []int32{-1, -3, 4, 2},
 			},
 			want: "YES",
 		},
 		"case_2": {
 			args: args{
 				attendance: 2,
-				students: []int32{0, -1, 2, 1},
+				students:   []int32{0, -1, 2, 1},
 			},
 			want: "NO",
 		},

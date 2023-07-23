@@ -6,7 +6,7 @@ func Test_designerPdfViewer(t *testing.T) {
 	t.Parallel()
 	type args struct {
 		heights []int32
-		word string
+		word    string
 	}
 	tests := map[string]struct {
 		args args
@@ -15,14 +15,14 @@ func Test_designerPdfViewer(t *testing.T) {
 		"case_1": {
 			args: args{
 				heights: []int32{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5},
-				word: "abc",
+				word:    "abc",
 			},
 			want: 9,
 		},
 		"case_2": {
 			args: args{
 				heights: []int32{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7},
-				word: "zaba",
+				word:    "zaba",
 			},
 			want: 28,
 		},
