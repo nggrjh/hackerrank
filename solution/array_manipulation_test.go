@@ -27,13 +27,13 @@ func Test_arrayManipulation(t *testing.T) {
 	for name, test := range tests {
 		tt := test
 		nm := name
-		t.Run(name, func(t *testing.T) {
+		t.Run(nm, func(t *testing.T) {
 			t.Parallel()
 
 			var n int32
 			var queries [][]int32
 
-			lines := common.ReadLines(fmt.Sprintf("../input/array_manipulation/%s.txt", nm))
+			lines := common.ReadLines(fmt.Sprintf("../case/array_manipulation/%s_input.txt", nm))
 			for i, line := range lines {
 				texts := strings.Split(line, " ")
 

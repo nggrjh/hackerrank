@@ -28,7 +28,7 @@ func Test_countTriplets(t *testing.T) {
 		t.Run(nm, func(t *testing.T) {
 			t.Parallel()
 
-			lines := common.ReadLines(fmt.Sprintf("../input/count_triplets/%s.txt", nm))
+			lines := common.ReadLines(fmt.Sprintf("../case/count_triplets/%s_input.txt", nm))
 			queries := strings.Split(lines[0], " ")
 
 			r, _ := strconv.ParseInt(queries[1], 10, 64)
