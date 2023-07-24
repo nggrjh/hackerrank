@@ -37,14 +37,46 @@ func Test_appendAndDelete(t *testing.T) {
 			},
 			want: "Yes",
 		},
-		// "case_10": {
-		// 	args: args{
-		// 		initial:    "abcd",
-		// 		desired:    "abcdert",
-		// 		operations: 10,
-		// 	},
-		// 	want: "No",
-		// },
+		"case_2": {
+			args: args{
+				initial:    "aaaaaaaaaa",
+				desired:    "aaaaa",
+				operations: 7,
+			},
+			want: "Yes",
+		},
+		"case_3": {
+			args: args{
+				initial:    "zzzzz",
+				desired:    "zzzzzzz",
+				operations: 4,
+			},
+			want: "Yes",
+		},
+		"case_4": {
+			args: args{
+				initial:    "qwerasdf",
+				desired:    "qwerbsdf",
+				operations: 6,
+			},
+			want: "No",
+		},
+		"case_5": {
+			args: args{
+				initial:    "y",
+				desired:    "yu",
+				operations: 2,
+			},
+			want: "No",
+		},
+		"case_10": {
+			args: args{
+				initial:    "abcd",
+				desired:    "abcdert",
+				operations: 10,
+			},
+			want: "No",
+		},
 		"case_13": {
 			args: args{
 				initial:    "ashley",

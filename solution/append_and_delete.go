@@ -2,32 +2,30 @@ package solution
 
 import "strings"
 
-// FIXME: https://www.hackerrank.com/challenges/append-and-delete/problem
+// https://www.hackerrank.com/challenges/append-and-delete/problem
 func appendAndDelete(initial, desired string, operations int32) string {
-	if initial == desired {
-		return "Yes"
-	}
-
-	if len(initial)+len(desired) == int(operations) {
+	if len(initial)+len(desired) <= int(operations) {
 		return "Yes"
 	}
 
 	ln := len(initial)
-	word := initial
 	for i := 0; i < ln; i++ {
-		if operations < 1 {
-			return "No"
+		if desired == initial && operations%2 == 0 {
+			return "Yes"
 		}
 
-		word = initial[:len(initial)-i-1]
+		initial = initial[:len(initial)-1]
 		operations--
 
-		if strings.HasPrefix(desired, word) {
+		if strings.HasPrefix(desired, initial) {
+			desired = desired[len(initial):]
 			break
 		}
 	}
 
-	if len(desired)-len(word) <= int(operations) {
+	if len(desired) == int(operations) {
+		return "Yes"
+	} else if len(desired) < int(operations) && operations%2 == 0 {
 		return "Yes"
 	}
 
